@@ -15,7 +15,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center h-20 xl:w-3/5">
         <Link href="">
           <div className="text-black">
-            <h1 className="text-xl font-bold">Puns</h1>
+            <h1 className="text-xl font-bold">PunAPI</h1>
           </div>
         </Link>
         <div className="md:hidden">
