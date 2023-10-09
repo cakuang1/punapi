@@ -17,6 +17,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/prisma.mjs"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/prisma.mjs", "pages/api/[id].ts"],
   "exclude": ["node_modules"]
 }
