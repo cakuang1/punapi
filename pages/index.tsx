@@ -50,6 +50,7 @@ export default function Home() {
             <code>
                 {`{`}
                 {"\n"}
+
                 {"  \"pun\": \"I went to a seafood disco last week... and pulled a mussel.\""}
                 {"\n"}
                 {`}`}
@@ -101,6 +102,8 @@ Retrieve a specific pun by providing its unique identifier (ID).
       <code>
           {`{`}
           {"\n"}
+          {"  \"id\": \"123456\""}
+            {"\n"}
           {"  \"pun\": \"I went to a seafood disco last week... and pulled a mussel.\""}
           {"\n"}
           {`}`}
@@ -133,7 +136,7 @@ Retrieve a specific pun by providing its unique identifier (ID).
                         int
                     </td>
                     <td className="px-6 py-4">
-                        The ID of the pun. This ID can be found in the Search section
+                        The ID of the pun. This ID can be found in the Search page.
                     </td>
                 </tr>
             </tbody>
@@ -145,9 +148,9 @@ Retrieve a specific pun by providing its unique identifier (ID).
 
 <div className="rounded">
 
-<p className="font-bold text-3xl mb-2 mt-10"><span className="border-b">GET Pun BY TYPE</span></p>
+<p className="font-bold text-3xl mb-2 mt-10"><span className="border-b">GET Pun Meme</span></p>
 <p className="text-gray-600 mb-4">
-Retrieve a random pun of a specific type. These types are defined below.
+Retrieve a random pun meme. The response format will be in JSON with a direct link to the image to adhere to RESTful principles.
 </p>
 <div className="relative overflow-x-auto">
 <table className="w-full text-sm text-left text-gray-500  ">
@@ -168,7 +171,7 @@ Retrieve a random pun of a specific type. These types are defined below.
           <span className="">GET</span> 
           </th>
           <td className="px-6 py-4 font-semibold">
-          https://api.punapi.rest/{"{id}"}
+          https://api.punapi.rest/meme
           </td>
       </tr>
   </tbody>
@@ -224,26 +227,7 @@ Retrieve a random pun of a specific type. These types are defined below.
             </tbody>
         </table>
     </div>
-</div>
-
-        <h2>Get a Pun of a specific type</h2>
-
-        <ul>
-          <li><strong>Homophonic Pun:</strong> Relies on words that sound alike but have different meanings. The humor is based on the sound similarity.</li>
-          <li><strong>Homographic Pun:</strong> Exploits words that are spelled the same but have different meanings, often relying on sight more than sound.</li>
-          <li><strong>Homonymic Pun:</strong> Relies on words that are both homographs (spelled the same) and homophones (sound the same), often involving words with multiple meanings.</li>
-          <li><strong>Compound Pun:</strong> Contains two or more puns within the same statement, involving multiple pun aspects.</li>
-          <li><strong>Recursive Pun:</strong> The second aspect of the pun relies on understanding an element in the first, creating a layered interpretation.</li>
-          <li><strong>Visual Pun:</strong> Involves visual elements or symbols that contribute to wordplay, often using pictures or symbols.</li>
-          <li><strong>Paronomastic Pun:</strong> Manipulates well-known idioms, proverbs, or phrases to deliver a punned twist, altering the expected phrase.</li>
-          <li><strong>Metonymic Pun:</strong> Exploits the metonymic relationship between words, where one word is substituted for another closely associated concept.</li>
-          <li><strong>Sylleptic/Heteronymic Pun:</strong> A single word affects the rest of the sentence, changing the meaning of the idiom it&apos;s used in, using the word in both its literal and metaphorical senses.</li>
-          <li><strong>Antanaclasis Pun:</strong> A single word or phrase is repeated, but the meaning changes each time, creating a surprising shift in meaning.</li>
-        </ul>
-
-        <p></p>
-
-        
+</div>  
       </div>
     </Layout>
     

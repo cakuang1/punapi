@@ -11,8 +11,10 @@ datasource db {
 }
 
 model Puns {
-  id        String     @default(cuid()) @id
+  id   Int    @id @default(autoincrement())
   pun     String
-  type   String
 }
+
+
+
 
