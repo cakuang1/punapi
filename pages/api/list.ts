@@ -1,6 +1,6 @@
 import { list } from '@vercel/blob';
 import { NextResponse } from 'next/server';
- 
+
 export const config = {
   runtime: 'edge',
 };

@@ -1,10 +1,10 @@
 import Layout from "@/components/layout"
+import Table from "@/components/table"
+
+const test = [{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"}]
+
 
 export default function Random() {
-
-
-
-
 
   return (
     <Layout>
@@ -14,6 +14,7 @@ export default function Random() {
         <div className="mt-4">
             <div><h2 className="Endpoint"> Want to look for a specific pun? </h2></div>
         </div>
+        <Table listofpunid={test}/>
       </div>
     </div>
     </Layout>
