@@ -18,7 +18,6 @@ export default function Add() {
        <div className="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
            <textarea id="comment"  className="w-full px-0 text-lg text-gray-900 bg-white  focus:outline-none h-20" placeholder="Write your Pun ..." required></textarea>
        </div>
-
    </div>
    <button type="submit" className="bg-gray-600 hover:bg-black text-white py-2 w-32 px-4 rounded">
             Submit

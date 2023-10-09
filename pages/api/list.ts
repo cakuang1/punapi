@@ -7,5 +7,6 @@ export const config = {
  
 export default async function blobs(request: Request) {
   const { blobs } = await list();
+
   return NextResponse.json(blobs);
 }
