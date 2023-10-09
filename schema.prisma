@@ -12,7 +12,7 @@ datasource db {
 
 model Puns {
   id   Int    @id @default(autoincrement())
-  pun     String
+  pun     String @unique
 }
 
 
