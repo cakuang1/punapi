@@ -145,9 +145,9 @@ Retrieve a specific pun by providing its unique identifier (ID).
 
 <div className="rounded">
 
-<p className="font-bold text-3xl mb-2 mt-10"><span className="border-b">GET Pun BY ID</span></p>
+<p className="font-bold text-3xl mb-2 mt-10"><span className="border-b">GET Pun BY TYPE</span></p>
 <p className="text-gray-600 mb-4">
-Retrieve a specific pun by providing its unique identifier (ID).
+Retrieve a random pun of a specific type. These types are defined below.
 </p>
 <div className="relative overflow-x-auto">
 <table className="w-full text-sm text-left text-gray-500  ">
@@ -226,7 +226,6 @@ Retrieve a specific pun by providing its unique identifier (ID).
     </div>
 </div>
 
-
         <h2>Get a Pun of a specific type</h2>
 
         <ul>
@@ -238,7 +237,7 @@ Retrieve a specific pun by providing its unique identifier (ID).
           <li><strong>Visual Pun:</strong> Involves visual elements or symbols that contribute to wordplay, often using pictures or symbols.</li>
           <li><strong>Paronomastic Pun:</strong> Manipulates well-known idioms, proverbs, or phrases to deliver a punned twist, altering the expected phrase.</li>
           <li><strong>Metonymic Pun:</strong> Exploits the metonymic relationship between words, where one word is substituted for another closely associated concept.</li>
-          <li><strong>Sylleptic/Heteronymic Pun:</strong> A single word affects the rest of the sentence, changing the meaning of the idiom it's used in, using the word in both its literal and metaphorical senses.</li>
+          <li><strong>Sylleptic/Heteronymic Pun:</strong> A single word affects the rest of the sentence, changing the meaning of the idiom it&apos;s used in, using the word in both its literal and metaphorical senses.</li>
           <li><strong>Antanaclasis Pun:</strong> A single word or phrase is repeated, but the meaning changes each time, creating a surprising shift in meaning.</li>
         </ul>
 
