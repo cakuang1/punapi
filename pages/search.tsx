@@ -1,10 +1,25 @@
 import Layout from "@/components/layout"
 import Table from "@/components/table"
-
+import { useState,useEffect} from "react"
 const test = [{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"},{id: "123456",pun: "testpun"}]
 
 
-export default function Random() {
+export default function Search() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [displayedData, setDisplayedData] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the server for the current page
+    fetch(`/api/pagi/1`)
+      .then((response) => response.json())
+      .then((data) => {
+        setDisplayedData(data); // Update the displayed data
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, [currentPage]);
+
 
   return (
     <Layout>
@@ -14,7 +29,7 @@ export default function Random() {
         <div className="mt-4">
             <div><h2 className="Endpoint"> Want to look for a specific pun? </h2></div>
         </div>
-        <Table listofpunid={test}/>
+        <Table listofpunid={displayedData}/>
       </div>
     </div>
     </Layout>

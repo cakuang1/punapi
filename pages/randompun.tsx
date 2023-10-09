@@ -1,16 +1,35 @@
 import Layout from "@/components/layout"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 
 
 
 export default function Random() {
     const [currentPun, setCurrentPun] = useState(""); // Initialize with an empty string
+    console.log('test')
+    const fetchData = () => {
+      fetch(`/api/pun`)
+        .then((response) => response.json())
+        .then((data) => {
+          setCurrentPun(data.pun);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    };
+  
+    useEffect(() => {
+      // Fetch data only on the client side
+      if (typeof window !== "undefined") {
+        fetchData();
+      }
+    }, []); // Make sure the dependencies array is empty
 
+  
     const handleGeneratePun = () => {
-        // Replace this with the logic to generate a new pun
-        const newPun = "This is a new pun"; // Example pun text      
-        setCurrentPun(newPun); // Update the currentPun state with the new pun
-      };
+      fetchData()
+    }
+
+
   return (
     <Layout>
     <div className='api docs'>
@@ -33,11 +52,6 @@ export default function Random() {
                 <div className="ml-2">Tweet It</div>
                 </div>
         </div>
-
-
-
-
-
       </div>
     </div>
     </Layout>

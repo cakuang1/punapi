@@ -10,8 +10,6 @@ export default async function index(
         const allPuns = await prisma.puns.findMany();
         const randomIndex = Math.floor(Math.random() * allPuns.length);
         const randomPun = allPuns[randomIndex];
-
-
   response.status(200).json(randomPun);
 } catch (error) {
     console.error('Error fetching random pun:', error);

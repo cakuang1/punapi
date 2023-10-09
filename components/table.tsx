@@ -1,10 +1,6 @@
 
 import React from 'react';
 
-
-
-
-
 interface  listofpuns {
     listofpunid: { id: string, pun: string }[];
   }

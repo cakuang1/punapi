@@ -2,21 +2,17 @@
 
 import { PrismaClient } from '@prisma/client';
 import { NextApiRequest, NextApiResponse } from 'next';
-
 const prisma = new PrismaClient();
-
 export default async function handler(
     request: NextApiRequest,
     response: NextApiResponse,
   )  {
     const { page } = request.query;
-
     try {
       if (typeof page === 'string') {
         const { page = '1' } = request.query; // Default value '1' if 'page' is not provided
-        const pageSize = 30; // Set the page size to 30
+        const pageSize = 10; // Set the page size to 30
         const skip = (parseInt(page.toString()) - 1) * pageSize;
-    
         const data = await prisma.puns.findMany({
           skip,
           take: pageSize,
