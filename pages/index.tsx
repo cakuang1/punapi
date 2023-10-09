@@ -7,7 +7,6 @@ export default function Home() {
       <h2 className="text-2xl font-semibold text-center">API Documentation</h2>
         <div className="text-2xl font-semibold">Endpoints</div>
           <div className="border mt-2 mb-2"></div>
-          
       <div className="rounded">
 
       <p className="font-bold text-3xl mb-2 "><span className="border-b">GET a Random Pun</span></p>
@@ -40,7 +39,6 @@ export default function Home() {
     </table>
 </div>
 <div>
-
     <h2 className="font-semibold text-lg mt-2">Response Example</h2>
     <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
     <div className=" bg-green-100 text-green-400 rounded ">
@@ -48,12 +46,13 @@ export default function Home() {
     </div>
         <pre className="text-sm font-mono p-4">
             <code>
-                {`{`}
-                {"\n"}
-
-                {"  \"pun\": \"I went to a seafood disco last week... and pulled a mussel.\""}
-                {"\n"}
-                {`}`}
+            {`{`}
+          {"\n"}
+          {"  \"id\": \"23  \""}
+            {"\n"}
+          {"  \"pun\": \"I went to a seafood disco last week... and pulled a mussel.\""}
+          {"\n"}
+          {`}`}
             </code>
         </pre>
     </div>
@@ -92,7 +91,15 @@ Retrieve a specific pun by providing its unique identifier (ID).
 </table>
 </div>
 <div>
+<h2 className="font-semibold text-lg mt-2">Request Example</h2>
+<div className="rounded bg-gray-100 border border-gray-300 shadow-md">
 
+  <pre className="text-sm font-mono p-4">
+      <code>
+        GET https://api.punapi.rest/123456
+      </code>
+  </pre>
+</div>
 <h2 className="font-semibold text-lg mt-2">Response Example</h2>
 <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
 <div className=" bg-green-100 text-green-400 rounded ">
