@@ -1,4 +1,6 @@
 import Layout from "@/components/layout"
+import Image from "next/image"
+
 
 export default function Home() {
   return (
@@ -38,6 +40,36 @@ export default function Home() {
         </tbody>
     </table>
 </div>
+<h2 className="font-semibold text-lg mt-6">Parameters</h2>
+        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" className="px-6 py-3 rounded-l-lg">
+                        Name
+                    </th>
+                    <th scope="col" className="px-6 py-3 rounded-r-lg">
+                        Type
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                        Description
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr className="bg-white dark:bg-gray-800">
+                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        none
+                    </th>
+                    <td className="px-6 py-4">
+                        -----
+                    </td>
+                    <td className="px-6 py-4">
+                    -------------
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
 <div>
     <h2 className="font-semibold text-lg mt-2">Response Example</h2>
     <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
@@ -184,9 +216,9 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
   </tbody>
 </table>
 </div>
-<div>
+<div className=" rounded-md border p-4">
 
-<h2 className="font-semibold text-lg mt-2">Response Example</h2>
+<h2 className="font-semibold text-lg mt-2" >Response Example</h2>
 <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
 <div className=" bg-green-100 text-green-400 rounded ">
   <span className="text-xl font-semibold ml-5"> 200</span>
@@ -204,8 +236,9 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
   </pre>
 
 </div>
-<div className="mt-5"><span className="font-semibold text-lg text-green-400 mr-3 ">GET </span>  <a href="https://b085hi8rvymugnvm.public.blob.vercel-storage.com/2-bJZtO1TbX8MRhbK4Cx5UFkxHxNjz2C.jpg" target="_blank">Open Image in New Tab</a>
+<div className="mt-5"><span className="font-semibold text-lg text-green-400 mr-3 ">GET </span>  https://b085hi8rvymugnvm.public.blob.vercel-storage.com/2-bJZtO1TbX8MRhbK4Cx5UFkxHxNjz2C.jpg
 </div>
+<div></div>
 
 </div>
 <div>
@@ -233,7 +266,7 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
                         -----
                     </td>
                     <td className="px-6 py-4">
-                    -----
+                    -------------
                     </td>
                 </tr>
 

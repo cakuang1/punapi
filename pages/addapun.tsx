@@ -61,15 +61,15 @@ export default function Add() {
                 <p className="text-xs text-gray-500 ">PNG, JPG , SVG</p>
             </div>
             <input id="dropzone-file" type="file" accept=".png, .jpg, .jpeg, .svg"  className="hidden" onChange={handleFileChange}/>
-            {previewImage && <img src={previewImage} alt="Preview" />}
         </label>
-    </div> 
-
-   <button type="submit" className="bg-gray-600 hover:bg-black text-white py-2 w-32 px-4 rounded">
+    </div>  
+   <button type="submit" className="bg-gray-600 hover:bg-black text-white py-2 w-32 px-4 rounded mt-3">
             Submit
         </button>
 </form>
+  <div className="mt-4"><p><span className="font-bold mt-4">Note:</span> These will be manually reviewed before being inserted into our database</p></div>
       </div>
+
     </div>
     </Layout>
     
