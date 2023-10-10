@@ -34,7 +34,7 @@ export default function Home() {
                 <span className="">GET</span> 
                 </th>
                 <td className="px-6 py-4 font-semibold">
-                https://api.punapi.rest/
+                https://punapi.rest/api
                 </td>
             </tr>
         </tbody>
@@ -71,6 +71,15 @@ export default function Home() {
             </tbody>
         </table>
 <div>
+<h2 className="font-semibold text-lg mt-2">Request Example</h2>
+<div className="rounded bg-gray-100 border border-gray-300 shadow-md">
+
+  <pre className="text-sm font-mono p-4">
+      <code>
+        GET <a href="https://punapi.rest/api/pun">https://punapi.rest/api/pun</a>
+      </code>
+  </pre>
+</div>
     <h2 className="font-semibold text-lg mt-2">Response Example</h2>
     <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
     <div className=" bg-green-100 text-green-400 rounded ">
@@ -116,7 +125,7 @@ Retrieve a specific pun by providing its unique identifier (ID).
           <span className="">GET</span> 
           </th>
           <td className="px-6 py-4 font-semibold">
-          https://api.punapi.rest/{"{id}"}
+          https://punapi.rest/api/pun/{"{id}"}
           </td>
       </tr>
   </tbody>
@@ -125,10 +134,9 @@ Retrieve a specific pun by providing its unique identifier (ID).
 <div>
 <h2 className="font-semibold text-lg mt-2">Request Example</h2>
 <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
-
   <pre className="text-sm font-mono p-4">
       <code>
-        GET https://api.punapi.rest/123456
+        GET <a href="https://punapi.rest/api/pun/2">https://punapi.rest/api/pun/2</a>
       </code>
   </pre>
 </div>
@@ -141,9 +149,9 @@ Retrieve a specific pun by providing its unique identifier (ID).
       <code>
           {`{`}
           {"\n"}
-          {"  \"id\": \"123456\""}
+          {"  \"id\": \"2\""}
             {"\n"}
-          {"  \"pun\": \"I went to a seafood disco last week... and pulled a mussel.\""}
+          {"  \"pun\": \"I would avoid the sushi if I was you. It’s a little fishy.\""}
           {"\n"}
           {`}`}
       </code>
@@ -210,7 +218,7 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
           <span className="">GET</span> 
           </th>
           <td className="px-6 py-4 font-semibold">
-          https://api.punapi.rest/meme
+          https://punapi.rest/api/meme
           </td>
       </tr>
   </tbody>

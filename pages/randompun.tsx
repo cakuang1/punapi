@@ -46,10 +46,8 @@ export default function Random() {
     <Layout>
     <div className='api docs'>
       <div className="mx-auto w-3/5 text-center mt-12">
-        <h1 className="text-2xl font-bold">Random Pun</h1>
-        <div className="flex top">
-            <div><h2 className="Endpoint">https://</h2></div>
-        </div>
+        <h1 className="text-2xl font-bold mb-4">Random Pun</h1>
+
         <div className="box for pun h-32 border rounded flex items-center justify-center text-2xl">
   <p className="">{currentPun}</p>
 </div>
@@ -67,10 +65,8 @@ export default function Random() {
       </div>
 
       <div className="mx-auto w-3/5 text-center mt-12">
-        <h1 className="text-2xl font-bold">Random Meme</h1>
-        <div className="flex top">
-            <div><h2 className="Endpoint">https://api.kanye.rest</h2></div>
-        </div>
+        <h1 className="text-2xl font-bold mb-4">Random Meme</h1>
+
         <div className="box for pun h-32 border rounded flex items-center justify-center text-2xl h-auto p-5">
         <img
           src="https://b085hi8rvymugnvm.public.blob.vercel-storage.com/2-bJZtO1TbX8MRhbK4Cx5UFkxHxNjz2C.jpg"
