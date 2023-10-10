@@ -1,9 +1,30 @@
 import Layout from "@/components/layout"
-
+import { useState } from "react";
 export default function Add() {
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
 
 
-
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] as File | undefined;
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      setSelectedFile(file);
+      setPreviewImage(imageUrl);
+    } else {
+      setPreviewImage(null);
+    }
+  };
+  // Function to handle form submission (you can send the file to the server here)
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    if (selectedFile) {
+      // You can send the selectedFile to the server or perform other actions here
+      console.log('Selected file:', selectedFile);
+    } else {
+      console.log('No file selected.');
+    }
+  };
 
   return (
     <Layout>
@@ -29,8 +50,7 @@ export default function Add() {
         <div className="text-center my-12">
               Want to add a Pun based Meme to our database? Upload it here! 
         </div>
-        <form>
-
+        <form onSubmit={handleSubmit}>
         <div className="flex items-center justify-center w-full">
         <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
             <div className="flex flex-col items-center justify-center pt-5 pb-6">
@@ -40,7 +60,8 @@ export default function Add() {
                 <p className="mb-2 text-sm text-gray-500 "><span className="font-semibold">Click to upload</span> or drag and drop</p>
                 <p className="text-xs text-gray-500 ">PNG, JPG , SVG</p>
             </div>
-            <input id="dropzone-file" type="file" className="hidden" />
+            <input id="dropzone-file" type="file" accept=".png, .jpg, .jpeg, .svg"  className="hidden" onChange={handleFileChange}/>
+            {previewImage && <img src={previewImage} alt="Preview" />}
         </label>
     </div> 
 
