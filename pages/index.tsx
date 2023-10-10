@@ -195,12 +195,18 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
       <code>
           {`{`}
           {"\n"}
-          {"  \"pun\": \"I went to a seafood disco last week... and pulled a mussel.\""}
+          {"  \"meme\": \"https://b085hi8rvymugnvm.public.blob.vercel-storage.com/2-bJZtO1TbX8MRhbK4Cx5UFkxHxNjz2C.jpg\""}
           {"\n"}
           {`}`}
+          {"\n"}
+
       </code>
   </pre>
+
 </div>
+<div className="mt-5"><span className="font-semibold text-lg text-green-400 mr-3 ">GET </span>  <a href="https://b085hi8rvymugnvm.public.blob.vercel-storage.com/2-bJZtO1TbX8MRhbK4Cx5UFkxHxNjz2C.jpg" target="_blank">Open Image in New Tab</a>
+</div>
+
 </div>
 <div>
         <h2 className="font-semibold text-lg mt-6">Parameters</h2>
@@ -221,13 +227,13 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
             <tbody>
                 <tr className="bg-white dark:bg-gray-800">
                     <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        id
+                        none
                     </th>
                     <td className="px-6 py-4">
-                        String
+                        -----
                     </td>
                     <td className="px-6 py-4">
-                        ID 
+                    -----
                     </td>
                 </tr>
 
