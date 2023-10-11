@@ -244,9 +244,11 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
   </pre>
 
 </div>
-<div className="mt-5"><span className="font-semibold text-lg text-green-400 mr-3 ">GET </span>  https://b085hi8rvymugnvm.public.blob.vercel-storage.com/2-bJZtO1TbX8MRhbK4Cx5UFkxHxNjz2C.jpg
+<div className="mt-5 text-center mb-10"><span className="font-semibold text-lg text-green-400 mr-3 ">GET </span>  https://b085hi8rvymugnvm.public.blob.vercel-storage.com/2-bJZtO1TbX8MRhbK4Cx5UFkxHxNjz2C.jpg
 </div>
-<div></div>
+<div className="flex items-center justify-center">
+    <img src={'https://b085hi8rvymugnvm.public.blob.vercel-storage.com/2-bJZtO1TbX8MRhbK4Cx5UFkxHxNjz2C.jpg'} alt="" width={500} height={500}/>    
+</div>
 
 </div>
 <div>
