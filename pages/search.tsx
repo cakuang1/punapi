@@ -1,12 +1,9 @@
 import Layout from "@/components/layout"
 import Table from "@/components/table"
-import { useState,useEffect} from "react"
-
+import SearchResults from "@/components/searchresults"
 
 export default function Search() {
-
-
-
+  
   return (
     <Layout>
     <div className='api docs'>
@@ -18,6 +15,7 @@ export default function Search() {
  
 
         </div>
+        <SearchResults/>
         <Table />
         
       </div>

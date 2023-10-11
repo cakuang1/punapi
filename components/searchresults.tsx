@@ -1,25 +1,37 @@
 
-import React from 'react';
+import React, { use } from 'react';
 import { useState } from 'react';
 
 
-
-interface  listofpuns {
+interface  ListOfPuns {
     listofpunid: { id: string, pun: string }[];
   }
-  const [search,setSearch] = useState('');
 
-  const [displayedData, setDisplayedData] = useState([]);
-
-  const handleSearchInputChange = (e) => {
-    const searchTerm = e.target.value;
-    setSearch(searchTerm);
-  };
-
-
-
-
-  const SearchResults: React.FC<listofpuns> = ({listofpunid}) => {
+  const SearchResults: React.FC = () => {
+    const [puns,setPuns] = useState<ListOfPuns['listofpunid']>([])
+    const [search,setSearch] = useState('');
+    const [error,setError] = useState(null);
+    const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const searchTerm = e.target.value;
+      setSearch(searchTerm);
+    };
+    const handleSearch = () => {
+      setError(null);
+      // Make an API call to search for puns
+      fetch(`/api/pun/search?query=${search}`)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.error) {
+            // Check if the response data contains an error property
+            setError(data.error);
+          } else {
+            setPuns(data); // Update the puns state with the search results
+          }
+        })
+        .catch((error) => {
+          console.error('Error searching for puns:', error);
+        });
+    };
 
     return (
         <>           <div className="flex mt-4 mb-4">
@@ -43,8 +55,8 @@ interface  listofpuns {
       <div className={`Search text-center flex items-center justify-center rounded border mx-auto w-24 ${search ? 'bg-black text-white' : 'bg-gray-100 text-gray-400'} transition-all duration-300 ease-in-out`}>
   Search
 </div>
-
       </div>
+
 <div className="relative overflow-x-auto">
     <table className="w-full text-sm text-left text-gray-500 ">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50  ">
@@ -61,7 +73,7 @@ interface  listofpuns {
             </tr>
         </thead>
         <tbody>
-        {listofpunid.map((pun) => (
+        {puns.map((pun) => (
             <tr
               key={pun.id} // Use a unique key for each row
               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"

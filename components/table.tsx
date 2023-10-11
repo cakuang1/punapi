@@ -25,8 +25,8 @@ interface  listofpuns {
       }
    }
    function handleLeft() {
-    if (currentPage > 0) {
-      setCurrentPage(currentPage + 1)
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1)
     }
     
 

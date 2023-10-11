@@ -35,7 +35,7 @@ export default async function handler(
       if (idResult) {
         response.status(200).json(idResult);
       } else {
-        response.status(404).json({ error: 'ID not found' });
+        response.status(404).json({ error: 'ID ' +  queryValue +   ' not found' });
       }
     } else {
       // If the queryValue is not a valid number, treat it as a pun search
@@ -46,6 +46,9 @@ export default async function handler(
           },
         },
       });
+      if (punResults.length == 0) {
+        response.status(404).json({ error: 'No puns with search query ' +  '\'' + queryValue + '\''});
+      }
       response.status(200).json(punResults);
     }
   } catch (error) {
