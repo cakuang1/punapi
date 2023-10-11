@@ -13,7 +13,9 @@ const Header: React.FC = () => {
     <>
     <nav className="border-b">
       <div className="container mx-auto flex justify-between items-center h-20 xl:w-3/5">
-        <Link href="/">
+        <Link href="/" className="flex"
+>
+          <img src='favicon.ico' width={32} height={32} className='mr-2'></img>
           <div className="text-black">
             <h1 className="text-xl font-bold">PunAPI</h1>
           </div>
