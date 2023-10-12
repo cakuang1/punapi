@@ -3,9 +3,7 @@
 import { PrismaClient } from '@prisma/client';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export const config = {
-  runtime: 'edge',
-};
+
 
 
 

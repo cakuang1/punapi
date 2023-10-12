@@ -2,9 +2,6 @@
 
 import { PrismaClient } from '@prisma/client';
 import { NextApiRequest, NextApiResponse } from 'next';
-export const config = {
-  runtime: 'edge',
-};
 
 
 export default async function handler(
