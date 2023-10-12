@@ -11,6 +11,7 @@ export default async function handler(
     request: NextApiRequest,
     response: NextApiResponse,
   )  {
+    response.setHeader('Cache-Control', 'public, s-maxage=3600');
     const prisma = new PrismaClient();
     const { page } = request.query;
     try {
@@ -23,8 +24,6 @@ export default async function handler(
           take: pageSize,
         });
     
-
-
         response.json(data);
       } else {
         return response.status(400).json({ error: 'Invalid ID format' });
