@@ -3,11 +3,13 @@ import { NextApiRequest, NextApiResponse } from 'next';
 export const config = {
   runtime: 'edge',
 };
-const prisma = new PrismaClient();
+
 export default async function index(
   request: NextApiRequest,
   response: NextApiResponse,
-) {
+)
+
+{const prisma = new PrismaClient();
     try {
         const allPuns = await prisma.puns.findMany();
         const randomIndex = Math.floor(Math.random() * allPuns.length);

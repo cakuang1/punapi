@@ -7,14 +7,14 @@ export const config = {
   runtime: 'edge',
 };
 
-const prisma = new PrismaClient();
+
 
 export default async function handler(
   request: NextApiRequest,
   response: NextApiResponse,
 ) {
   const { query } = request.query;
-
+  const prisma = new PrismaClient();
   if (!query) {
     response.status(400).json({ error: 'Missing query parameter' });
     return;

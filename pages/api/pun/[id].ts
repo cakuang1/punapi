@@ -2,15 +2,16 @@
 
 import { PrismaClient } from '@prisma/client';
 import { NextApiRequest, NextApiResponse } from 'next';
-
-const prisma = new PrismaClient();
 export const config = {
   runtime: 'edge',
 };
+
+
 export default async function handler(
     request: NextApiRequest,
     response: NextApiResponse,
   )  {
+    const prisma = new PrismaClient();
     const { id } = request.query;
 
     try {
