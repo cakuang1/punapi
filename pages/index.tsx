@@ -225,7 +225,14 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
 </table>
 </div>
 <div className=" rounded-md border p-4">
-
+<h2 className="font-semibold text-lg mt-2">Request Example</h2>
+<div className="rounded bg-gray-100 border border-gray-300 shadow-md">
+  <pre className="text-sm font-mono p-4">
+      <code>
+        GET <a href="https://punapi.rest/api/pun">https://punapi.rest/api/meme</a>
+      </code>
+  </pre>
+</div>
 <h2 className="font-semibold text-lg mt-2" >Response Example</h2>
 <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
 <div className=" bg-green-100 text-green-400 rounded ">
