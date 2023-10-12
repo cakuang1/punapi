@@ -2,11 +2,9 @@
 import React, { use } from 'react';
 import { useState } from 'react';
 
-
 interface  ListOfPuns {
     listofpunid: { id: string, pun: string }[];
   }
-
   const SearchResults: React.FC = () => {
     const [puns,setPuns] = useState<ListOfPuns['listofpunid']>([])
     const [search,setSearch] = useState('');
@@ -64,8 +62,14 @@ interface  ListOfPuns {
       </div>
 
 <div className="relative overflow-x-auto">
-{error ? (
-          <p className="text-red-500">Error: {error}</p>
+{error ? (            <div className='mt-2'>
+          <p className="text-gray-300 ">
+            <div className='flex justify-center text-center'>            <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+</div>
+            
+            
+            {error}</p>
+            </div>
         ) :  puns.length > 0 ? (
     <table className="w-full text-sm text-left text-gray-500 ">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50  ">

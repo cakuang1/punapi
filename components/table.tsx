@@ -2,12 +2,11 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-interface  listofpuns {
-    listofpunid: { id: string, pun: string }[];
-  }
-
+interface  ListOfPuns {
+  listofpunid: { id: string, pun: string }[];
+}
   const Table: React.FC = () => {
-    const [listofpunid, setList] = useState([]);
+    const [listofpunid, setList] = useState<ListOfPuns['listofpunid']>([])
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
    
@@ -52,7 +51,7 @@ interface  listofpuns {
 
 
     return (
-<div className="relative overflow-x-auto">
+<div className="relative overflow-x-auto mt-5">
     <table className="w-full text-sm text-left text-gray-500 ">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50  ">
             <tr>
