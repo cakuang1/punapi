@@ -33,7 +33,7 @@ export default async function handler(
       });
 
       if (idResult) {
-        response.status(200).json(idResult);
+        response.status(200).json([idResult]);
       } else {
         response.status(404).json({ error: 'ID ' +  queryValue +   ' not found' });
       }

@@ -19,12 +19,15 @@ interface  listofpuns {
       setIsDropdownOpen(!isDropdownOpen);
     };
 
-   function handleRight() {
+    function handleRight(e: React.MouseEvent) {
+      e.preventDefault(); // Prevent the default behavior of the anchor element
       if (currentPage < numberofpages) {
-        setCurrentPage(currentPage + 1)
+        setCurrentPage(currentPage + 1);
       }
-   }
-   function handleLeft() {
+    }
+   function handleLeft(    e: React.MouseEvent) {
+
+    e.preventDefault(); // Prevent the default behavior of the anchor element
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1)
     }

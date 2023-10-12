@@ -16,6 +16,7 @@ interface  ListOfPuns {
       setSearch(searchTerm);
     };
     const handleSearch = () => {
+      setPuns([])
       setError(null);
       // Make an API call to search for puns
       fetch(`/api/pun/search?query=${search}`)
@@ -50,6 +51,11 @@ interface  ListOfPuns {
                   placeholder="Search for puns using key words or by id ..."
                   value={search} // Connect the input value to the search state
                   onChange={handleSearchInputChange} // Add onChange event handler
+                  onKeyUp={(e) => {
+                    if (e.key === 'Enter') {
+                      handleSearch();
+                    }
+                  }}
                 />
       </div>
       <div className={`Search text-center flex items-center justify-center rounded border mx-auto w-24 ${search ? 'bg-black text-white' : 'bg-gray-100 text-gray-400'} transition-all duration-300 ease-in-out`}>
@@ -58,6 +64,9 @@ interface  ListOfPuns {
       </div>
 
 <div className="relative overflow-x-auto">
+{error ? (
+          <p className="text-red-500">Error: {error}</p>
+        ) :  puns.length > 0 ? (
     <table className="w-full text-sm text-left text-gray-500 ">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50  ">
             <tr>
@@ -66,7 +75,7 @@ interface  ListOfPuns {
                 </th>
                 <th scope="col" className="px-6 py-3">
               &nbsp;
-            </th> {/* An empty cell to create space */}
+            </th> 
                 <th scope="col" className="px-6 py-3">
 
                 </th>
@@ -87,7 +96,9 @@ interface  ListOfPuns {
           ))}
         </tbody>
     </table>
-
+            ) : (
+              <div></div>
+            )}
 </div>
 </>
     );
