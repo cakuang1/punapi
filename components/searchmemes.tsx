@@ -21,7 +21,7 @@ import { useState,useEffect } from 'react';
   }, []);
 
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center rounded border bg-gray-100 mt-5">
       {images.map((imageUrl, index) => (
         <img
           key={index}
