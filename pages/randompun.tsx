@@ -50,7 +50,7 @@ export default function Random() {
   return (
     <Layout>
     <div className='api docs'>
-      <div className="mx-auto w-3/5 text-center mt-12">
+      <div className="mx-auto w-11/12 md:w-3/5  text-center mt-12">
         <h1 className="text-2xl font-bold mb-4">Random Pun</h1>
 
         <div className="box for pun h-32 border rounded flex items-center justify-center text-2xl">

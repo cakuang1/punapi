@@ -7,19 +7,17 @@ export default function Search() {
   return (
     <Layout>
     <div className='api docs'>
-      <div className="mx-auto w-3/5 text-center mt-12">
+      <div className="mx-auto w-11/12 md:w-3/5  text-center mt-12">
         <h1 className="text-2xl font-bold">Search Puns</h1>
         <div className="mt-4">
             <div><h2 className="Endpoint font-semibold"> Explore our pun database</h2></div>
 
  
-
-        </div>
         <SearchResults/>
         <Table />
         
       </div>
-      <div className="mx-auto w-3/5 text-center mt-12">
+      <div className="">
       <h1 className="text-2xl font-bold">Search Memes</h1>
       <div className="mt-4">
             <div><h2 className="Endpoint font-semibold"> Explore our memes</h2>
@@ -27,6 +25,7 @@ export default function Search() {
             </div>
             <Searchmeme/>
         </div>
+      </div>
       </div>
     </div>
     </Layout>

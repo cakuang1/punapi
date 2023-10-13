@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function Home() {
   return (
     <Layout>
-      <div className="mx-auto w-3/5   mt-12">
+      <div className="mx-auto w-11/12 md:w-3/5 mt-12 ">
       <h2 className="text-2xl font-semibold text-center">API Documentation</h2>
         <div className="text-2xl font-semibold">Endpoints</div>
           <div className="border mt-2 mb-2"></div>
@@ -75,7 +75,7 @@ export default function Home() {
 <h2 className="font-semibold text-lg mt-2">Request Example</h2>
 <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
 
-  <pre className="text-sm font-mono p-4">
+  <pre className="text-sm font-mono p-4 overflow-x-auto">
       <code>
         GET <a href="https://punapi.rest/api/pun">https://punapi.rest/api/pun</a>
       </code>
@@ -86,7 +86,7 @@ export default function Home() {
     <div className=" bg-green-100 text-green-400 rounded ">
         <span className="text-xl font-semibold ml-5"> 200</span>
     </div>
-        <pre className="text-sm font-mono p-4">
+        <pre className="text-sm font-mono p-4 overflow-x-auto">
             <code>
             {`{`}
           {"\n"}
@@ -166,7 +166,7 @@ Retrieve a specific pun by providing its unique identifier (ID).
 <div>
 <h2 className="font-semibold text-lg mt-2">Request Example</h2>
 <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
-  <pre className="text-sm font-mono p-4">
+  <pre className="text-sm font-mono p-4 overflow-x-auto">
       <code>
         GET <a href="https://punapi.rest/api/pun/2">https://punapi.rest/api/pun/2</a>
       </code>
@@ -177,7 +177,7 @@ Retrieve a specific pun by providing its unique identifier (ID).
 <div className=" bg-green-100 text-green-400 rounded ">
   <span className="text-xl font-semibold ml-5"> 200</span>
 </div>
-  <pre className="text-sm font-mono p-4">
+  <pre className="text-sm font-mono p-4 overflow-x-auto">
       <code>
           {`{`}
           {"\n"}
@@ -261,7 +261,7 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
 <div className=" rounded-md border p-4">
 <h2 className="font-semibold text-lg mt-2">Request Example</h2>
 <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
-  <pre className="text-sm font-mono p-4">
+  <pre className="text-sm font-mono p-4 overflow-x-auto">
       <code>
         GET <a href="https://punapi.rest/api/pun">https://punapi.rest/api/meme</a>
       </code>
@@ -272,7 +272,7 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
 <div className=" bg-green-100 text-green-400 rounded ">
   <span className="text-xl font-semibold ml-5"> 200</span>
 </div>
-  <pre className="text-sm font-mono p-4">
+  <pre className="text-sm font-mono p-4 overflow-x-auto">
       <code>
           {`{`}
           {"\n"}

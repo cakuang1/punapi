@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function Home() {
   return (
     <Layout>
- <div className="mx-auto w-3/5   mt-12">
+ <div className="mx-auto w-11/12 md:w-3/5    mt-12">
       <h2 className="text-2xl font-semibold text-center">About</h2>
 
       <p className="text-center w-1/2 mx-auto mt-12 text-gray-500">Welcome to PunAPI, your ultimate destination for puns and wordplay! PunAPI is a pun database and API created and maintained by Cary! I have collected puns from all over the web, so you can enjoy a hearty dose of laughter, wit, and clever wordplay all in one place.</p>
