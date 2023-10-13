@@ -1,23 +1,32 @@
+
+
 import { list } from '@vercel/blob';
-import { NextResponse } from 'next/server';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export const config = {
-  runtime: 'edge',
-};
 
-// Pun of the day is simply  a random element with a cache of 24 hours 
 
-// Function to pick a random element from an array
-function getRandomElement(arr: string | any[]) {
-  const randomIndex = Math.floor(Math.random() * arr.length);
-  return arr[randomIndex];
-}
-
-export default async function blobs(request: Request) {
-  const { blobs } = await list();
+export default async function handler(
+    request: NextApiRequest,
+    response: NextApiResponse,
+  )  {
+    response.setHeader('Cache-Control', 'public, s-maxage=3600');
+    function getRandomElement(arr: string | any[]) {
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        return arr[randomIndex];
+      }
+    try {
+        const { blobs } = await list();
  
-  // Pick a random blob from the list
-  const randomBlob = getRandomElement(blobs);
-  
-  return NextResponse.json({meme : randomBlob.url});
+        // Pick a random blob from the list
+        const randomBlob = getRandomElement(blobs);
+        
+        return response.json({meme : randomBlob.url});
+    }
+    catch {
+        return response.status(400)
+    }
+
+
+
+    
 }
