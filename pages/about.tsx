@@ -34,7 +34,7 @@ export default function Home() {
   </p>
   <div className="mx-auto w-3/5 mt-12">
   <h2 className="text-2xl font-semibold text-center">Thanks for reading!</h2>
-  <p className="text-center mt-4 text-gray-500">Heres a random Pun as a reward!</p>
+  <p className="text-center mt-4 text-gray-500 mb-5">Heres the pun of the day as a reward!</p>
   {punOfTheDay && <img src={punOfTheDay} alt="Pun of the Day" />}
 </div>
 </div>

@@ -34,7 +34,7 @@ export default function Home() {
                 <span className="">GET</span> 
                 </th>
                 <td className="px-6 py-4 font-semibold">
-                https://punapi.rest/api
+                https://punapi.rest/api/pun
                 </td>
             </tr>
         </tbody>
@@ -263,7 +263,7 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
 <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
   <pre className="text-sm font-mono p-4 overflow-x-auto">
       <code>
-        GET <a href="https://punapi.rest/api/pun">https://punapi.rest/api/meme</a>
+        GET <a href="https://punapi.rest/api/meme">https://punapi.rest/api/meme</a>
       </code>
   </pre>
 </div>
