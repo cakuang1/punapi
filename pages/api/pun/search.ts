@@ -11,10 +11,6 @@ export default async function handler(
 ) {
   const { query } = request.query;
   const prisma = new PrismaClient();
-  if (!query) {
-    response.status(400).json({ error: 'Missing query parameter' });
-    return;
-  }
 
   const queryValue = Array.isArray(query) ? query[0] : query;
 
