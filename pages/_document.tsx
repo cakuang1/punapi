@@ -3,7 +3,9 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   return (   
     <Html lang="en">
-      <Head />
+      <Head>
+        <title>PunAPI</title>
+      </Head>
       <body>
         <Main />
         <NextScript />

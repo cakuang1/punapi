@@ -280,7 +280,6 @@ Retrieve a random pun meme. The response format will be in JSON with a direct li
           {"\n"}
           {`}`}
           {"\n"}
-
       </code>
   </pre>
 
