@@ -2,6 +2,113 @@ import Layout from "@/components/layout"
 import Image from "next/image"
 
 
+
+
+
+function Pagination() {
+    return (
+        <div className="rounded">
+
+<p className="font-bold text-3xl mb-2 mt-10"><span className="border-b">GET Pun(s) by Pagination</span></p>
+<p className="text-gray-600 mb-4">
+Retrieve a pun(s) by providing a page. Fixed to 10 puns per page.
+</p>
+<div className="relative overflow-x-auto">
+<table className="w-full text-sm text-left text-gray-500  ">
+  <thead className="text-xs text-gray-700 uppercase bg-gray-100 ">
+      <tr>
+          <th scope="col" className="px-6 py-3 rounded-l-lg">
+          Request Type
+          </th>
+          <th scope="col" className="px-6 py-3 rounded-r-lg">
+          URL
+          </th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr className="bg-white bg-green-100">
+          <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+          <span className="">GET</span> 
+          </th>
+          <td className="px-6 py-4 font-semibold">
+          https://punapi.rest/api/pun/pagination?{"{page}"}
+          </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+<div>
+        <h2 className="font-semibold text-lg mt-6">Parameters</h2>
+        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" className="px-6 py-3 rounded-l-lg">
+                        Name
+                    </th>
+                    <th scope="col" className="px-6 py-3 rounded-r-lg">
+                        Type
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                        Description
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr className="bg-white dark:bg-gray-800">
+                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        page
+                    </th>
+                    <td className="px-6 py-4">
+                        int
+                    </td>
+                    <td className="px-6 py-4">
+                        The page number
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div>
+<h2 className="font-semibold text-lg mt-2">Request Example</h2>
+<div className="rounded bg-gray-100 border border-gray-300 shadow-md">
+  <pre className="text-sm font-mono p-4 overflow-x-auto">
+      <code>
+        GET <a href="https://punapi.rest/api/pun/pagination?page=2 ">https://punapi.rest/api/pun/pagination?page=2 </a>
+      </code>
+  </pre>
+</div>
+<h2 className="font-semibold text-lg mt-2">Response Example</h2>
+<div className="rounded bg-gray-100 border border-gray-300 shadow-md">
+<div className=" bg-green-100 text-green-400 rounded ">
+  <span className="text-xl font-semibold ml-5"> 200</span>
+</div>
+  <pre className="text-sm font-mono p-4 overflow-x-auto">
+  <code>
+  {JSON.stringify([
+    {"id":11,"pun":"My cat was just sick on the carpet, I don’t think it’s feline well."},
+    {"id":12,"pun":"Why did the octopus beat the shark in a fight? Because it was well armed."},
+    {"id":13,"pun":"How much does a hipster weigh? An instagram."},
+    {"id":14,"pun":"What did daddy spider say to baby spider? You spend too much time on the web."},
+    {"id":15,"pun":"Atheism is a non-prophet organisation."},
+    {"id":16,"pun":"There’s a new type of broom out, it’s sweeping the nation."},
+    {"id":17,"pun":"What cheese can never be yours? Nacho cheese."},
+    {"id":18,"pun":"What did the Buffalo say to his little boy when he dropped him off at school? Bison."},
+    {"id":19,"pun":"Have you ever heard of a music group called Cellophane? They mostly wrap."},
+    {"id":20,"pun":"Why does Superman gets invited to dinners? Because he is a Supperhero."}
+  ], null, 2)}
+</code>
+
+  </pre>
+</div>
+</div>
+
+</div>
+    )
+}
+
+
+
+
 export default function Home() {
   return (
     <Layout>
@@ -13,7 +120,7 @@ export default function Home() {
 
       <p className="font-bold text-3xl mb-2 "><span className="border-b">GET a Random Pun</span></p>
       <p className="text-gray-600 mb-4">
-    Retrieve a random pun from our collection of humorous wordplay. Use this endpoint to add a touch of humor to your day or integrate puns into your applications for a fun twist. Each request will return a unique pun for your enjoyment.
+    Retrieve a random pun from our collection
 </p>
 <div className="relative overflow-x-auto">
     <table className="w-full text-sm text-left text-gray-500  ">
@@ -190,14 +297,15 @@ Retrieve a specific pun by providing its unique identifier (ID).
   </pre>
 </div>
 </div>
-
 </div>
+
+<Pagination/>
 
 <div className="rounded">
 
 <p className="font-bold text-3xl mb-2 mt-10"><span className="border-b">GET Pun(s) by Searching</span></p>
 <p className="text-gray-600 mb-4">
-Retrieve a pun(s) by searching
+Retrieve a pun(s) by searching 
 </p>
 <div className="relative overflow-x-auto">
 <table className="w-full text-sm text-left text-gray-500  ">
@@ -286,10 +394,9 @@ Retrieve a pun(s) by searching
 
 
 <div className="rounded">
-
 <p className="font-bold text-3xl mb-2 mt-10"><span className="border-b">GET Pun Meme</span></p>
 <p className="text-gray-600 mb-4">
-Retrieve a random pun meme. The response format will be in JSON with a direct link to the image to adhere to RESTful principles.
+Retrieve a random pun meme. 
 </p>
 <div className="relative overflow-x-auto">
 <table className="w-full text-sm text-left text-gray-500  ">
