@@ -1,32 +1,25 @@
-
-
 import { list } from '@vercel/blob';
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-
+function getRandomElement<T>(arr: T[]): T {
+  const randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
+}
 
 export default async function handler(
-    request: NextApiRequest,
-    response: NextApiResponse,
+    request: VercelRequest,
+    response: VercelResponse,
   )  {
     response.setHeader('Cache-Control', 'public, s-maxage=3600');
-    function getRandomElement(arr: string | any[]) {
-        const randomIndex = Math.floor(Math.random() * arr.length);
-        return arr[randomIndex];
-      }
     try {
         const { blobs } = await list();
- 
+        // Function to pick a random element from an array
         // Pick a random blob from the list
         const randomBlob = getRandomElement(blobs);
-        
-        return response.json({meme : randomBlob.url});
+        return response.json({ meme: randomBlob.url });
     }
-    catch {
-        return response.status(400)
+    catch (error) {
+        console.error('Error fetching blobs:', error);
+        return response.status(500).json({ error: 'Internal server error' });
     }
-
-
-
-    
 }

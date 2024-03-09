@@ -4,8 +4,8 @@ export default function Document() {
   return (   
     <Html lang="en">
       <Head>
-        <title>PunAPI</title>
       </Head>
+      <title>PunAPI</title>
       <body>
         <Main />
         <NextScript />
