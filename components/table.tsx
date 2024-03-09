@@ -14,9 +14,7 @@ interface  ListOfPuns {
 
     const numberofpages = 10;
 
-    const toggleDropdown = () => {
-      setIsDropdownOpen(!isDropdownOpen);
-    };
+
 
     function handleRight(e: React.MouseEvent) {
       e.preventDefault(); // Prevent the default behavior of the anchor element
@@ -36,7 +34,7 @@ interface  ListOfPuns {
 
     useEffect(() => {
       // Fetch data from /api/pagi/1 when the component mounts
-      fetch('/api/pagi/' + currentPage)
+      fetch('/api/pun/pagination?page=' + currentPage)
         .then((response) => response.json())
         .then((data) => {
           // Update the state with the fetched data
@@ -83,7 +81,7 @@ interface  ListOfPuns {
     </table>
     <nav className="inline-flex items-center p-1 rounded bg-white space-x-2 mt-2">
       <a
-        className="p-1 text-black bg-white hover:text-white hover:bg-blue-600 hover:border-blue-600"
+        className="p-1 text-black bg-white hover:text-gray-300"
         href="#"
         onClick={handleLeft}
       >
@@ -115,7 +113,7 @@ interface  ListOfPuns {
         )}
         </div>
       <a
-        className="p-1 text-black bg-white hover:text-white"
+        className="p-1 text-black bg-white hover:text-gray-300"
         href="#"
         onClick={handleRight}
       >

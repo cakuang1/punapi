@@ -126,7 +126,7 @@ Retrieve a specific pun by providing its unique identifier (ID).
           <span className="">GET</span> 
           </th>
           <td className="px-6 py-4 font-semibold">
-          https://punapi.rest/api/pun/{"{id}"}
+          https://punapi.rest/api/pun?id={"{id}"}
           </td>
       </tr>
   </tbody>
@@ -168,7 +168,7 @@ Retrieve a specific pun by providing its unique identifier (ID).
 <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
   <pre className="text-sm font-mono p-4 overflow-x-auto">
       <code>
-        GET <a href="https://punapi.rest/api/pun/2">https://punapi.rest/api/pun/2</a>
+        GET <a href="https://punapi.rest/api/pun?id=2">https://punapi.rest/api/pun?id=2</a>
       </code>
   </pre>
 </div>
@@ -259,7 +259,7 @@ Retrieve a pun(s) by searching
 <div className="rounded bg-gray-100 border border-gray-300 shadow-md">
   <pre className="text-sm font-mono p-4 overflow-x-auto">
       <code>
-        GET <a href="https://punapi.rest/api/pun/2">https://punapi.rest/api/pun/search?query=cookie </a>
+        GET <a href="https://punapi.rest/api/pun/search?query=cookie">https://punapi.rest/api/pun/search?query=cookie </a>
       </code>
   </pre>
 </div>
