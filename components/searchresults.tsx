@@ -31,7 +31,6 @@ interface  ListOfPuns {
           console.error('Error searching for puns:', error);
         });
     };
-
     return (
         <>           <div className="flex mt-4 mb-4">
             <div className="flex items-center border-2 border-gray-300 bg-white h-11 pr-10 rounded-lg text-sm focus:outline-none w-10/12">
@@ -56,8 +55,12 @@ interface  ListOfPuns {
                   }}
                 />
       </div>
-      <div className={`Search text-center flex items-center justify-center rounded border mx-auto w-24 ${search ? 'bg-black text-white' : 'bg-gray-100 text-gray-400'} transition-all duration-300 ease-in-out`}>
-  Search
+      <div 
+  className={`Search text-center flex items-center justify-center rounded border mx-auto w-24 ${search ? 'bg-black text-white' : 'bg-gray-100 text-gray-400'} transition-all duration-300 ease-in-out`} 
+  onClick={handleSearch}
+  style={{ cursor: 'pointer' }} // Change cursor to pointer
+>
+  Search 
 </div>
       </div>
 
